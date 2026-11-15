@@ -1,1 +1,67 @@
 
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Painel — Nexus</title>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+
+<header class="app-header">
+    <a class="app-brand" href="index.html">
+        <img src="logo.svg" alt="Nexus">
+        NEXUS
+    </a>
+    <button id="logout" class="logout">Sair da conta</button>
+</header>
+
+<main class="dashboard">
+    <h1>Painel Nexus</h1>
+    <p class="dashboard-subtitle">Suas ferramentas digitais em um só lugar.</p>
+
+    <div class="tool-grid">
+
+        <section class="tool-card">
+            <h2>Nexus Code</h2>
+            <p>Escreva HTML e veja uma prévia do seu projeto.</p>
+
+            <textarea id="codigo" class="tool-area"
+                spellcheck="false"><h1>Olá, Nexus!</h1>
+<p>Meu primeiro projeto.</p>
+<button>Começar</button></textarea>
+
+            <button id="executar" class="app-button">
+                Executar código
+            </button>
+
+            <iframe id="visualizacao" class="preview"
+                title="Prévia do código"
+                sandbox=""></iframe>
+        </section>
+
+        <section class="tool-card">
+            <h2>Nexus Colors</h2>
+            <p>Escolha uma cor e copie seu código hexadecimal.</p>
+
+            <div class="color-row">
+                <input id="cor" class="color-picker"
+                    type="color" value="#2878ff">
+                <input id="codigo-cor" class="tool-input"
+                    value="#2878FF" readonly>
+            </div>
+
+            <button id="copiar-cor" class="app-button">
+                Copiar cor
+            </button>
+
+            <p id="mensagem-cor" aria-live="polite"></p>
+        </section>
+
+    </div>
+</main>
+
+<script type="module" src="painel.js"></script>
+</body>
+</html>
