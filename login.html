@@ -1,1 +1,46 @@
 
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Entrar — Nexus</title>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body data-page="login">
+
+<header class="app-header">
+    <a class="app-brand" href="index.html">
+        <img src="logo.svg" alt="Nexus">
+        NEXUS
+    </a>
+    <a class="app-link" href="cadastro.html">Criar conta</a>
+</header>
+
+<main class="auth-container">
+    <h1>Entrar na Nexus</h1>
+    <p>Acesse sua conta para utilizar suas ferramentas.</p>
+
+    <form id="auth-form">
+        <label for="email">E-mail</label>
+        <input id="email" type="email" autocomplete="email" required>
+
+        <label for="senha">Senha</label>
+        <input id="senha" type="password"
+               autocomplete="current-password"
+               minlength="6" required>
+
+        <button class="app-button" type="submit">Entrar</button>
+    </form>
+
+    <p id="auth-message" class="auth-message" aria-live="polite"></p>
+
+    <div class="auth-footer">
+        Ainda não tem conta?
+        <a class="app-link" href="cadastro.html">Cadastre-se</a>
+    </div>
+</main>
+
+<script type="module" src="auth.js"></script>
+</body>
+</html>
