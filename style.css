@@ -427,4 +427,10 @@ a {
         flex-direction: column;
         gap: 20px;
     }
+
+    .nexus-logo {
+    width: 38px;
+    height: 38px;
+    display: block;
+}
 }
